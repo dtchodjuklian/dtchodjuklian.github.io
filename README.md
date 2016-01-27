@@ -1,2 +1,0 @@
-# dtchodjuklian.github.io
-dev
