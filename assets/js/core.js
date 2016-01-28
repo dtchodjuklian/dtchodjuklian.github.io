@@ -1,11 +1,11 @@
 /* -----------------------------------------------------------------------------
 
-Player -  Creative Multipurpose HTML5 Template
+app
 
 File:           JS Core
 Version:        1.0
-Last change:    21/09/15 
-Author:         Suelo
+Last change:    28/01/2016 
+Author:         DT
 
 -------------------------------------------------------------------------------- */
 
