@@ -24,12 +24,9 @@ var Player = {
             var self = this;
 
             Pace.on('done', function(){
-                var bgMusic = $('#bg-music')[0];
+                
                 $('#page-loader').fadeOut(300);
-                if(bgMusic && $('#bg-music').data('autoplay')==true) { 
-                    bgMusic.play();
-                    $('a[data-target="bg-music-toggle"]').addClass('playing');
-                }
+                
                 self.animations();
             });
 
@@ -41,7 +38,7 @@ var Player = {
             self.mobileNav();
             self.map();
             self.forms();
-            self.bgMusic();
+            
 
         },
         mobileDetector: function () {
@@ -68,10 +65,6 @@ var Player = {
             };
 
             window.trueMobile = isMobile.any();
-
-            if (trueMobile) {
-                $('audio').remove();
-            }
 
         },
         backgrounds: function() {
@@ -318,30 +311,7 @@ var Player = {
             google.maps.event.addDomListener(window, 'load', mapInitialize);
 
         },
-        bgMusic: function() {
-
-            var bgMusic = $('#bg-music')[0];
-
-            if(bgMusic) {
-
-                bgMusic.volume = 0.15;
-                $('a[data-target="bg-music-toggle"]').on('click', function(){
-                    if(bgMusic.paused) {
-                        bgMusic.play();
-                        $(this).addClass('playing');
-                    }
-                    else { 
-                        bgMusic.pause();
-                        $(this).removeClass('playing');
-                    }
-                    return false;
-                });
-
-            }
-
-            if (trueMobile) $('audio').remove();
-
-        },
+       
         forms: function() {
 
             var $formAlert, $formError;
